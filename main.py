@@ -11,10 +11,9 @@ def main():
     pygame.init()
     # Main game loop
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    clock=pygame.time.Clock()
+    clock = pygame.time.Clock()
+    player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     dt = 0
-    player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
-   
 
     while True:
         log_state()
@@ -23,10 +22,11 @@ def main():
                 pygame.quit()
                 exit()
         screen.fill("black")
-        
-        pygame.display.flip()
         player.draw(screen)
 
+        #flip currently needs to go last unless otherwise noted
+        pygame.display.flip()
+        
         #clock.tick(60)
         dt = clock.tick(60)/1000
         
