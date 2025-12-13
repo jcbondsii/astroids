@@ -22,8 +22,9 @@ def main():
                 pygame.quit()
                 exit()
         screen.fill("black")
+        player.update(dt)
         player.draw(screen)
-
+        
         #flip currently needs to go last unless otherwise noted
         pygame.display.flip()
         
