@@ -5,6 +5,7 @@ SCREEN_HEIGHT = 720
 #player constants
 PLAYER_RADIUS = 20
 PLAYER_TURN_SPEED = 300
+PLAYER_SPEED = 200
 
 #used to draw shape
 LINE_WIDTH = 2
